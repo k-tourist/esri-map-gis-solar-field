@@ -1,0 +1,1638 @@
+{
+  "sites": [
+    {
+      "name": "Pane Site A",
+      "geometry": {
+        "type": "point",
+        "longitude": -71.06942849090024,
+        "latitude": 42.374753835341714,
+        "z": 23.272470890311524,
+        "footprintRing": [
+          {
+            "longitude": -71.0695325814195,
+            "latitude": 42.37480128465879,
+            "z": 23.27479142602533
+          },
+          {
+            "longitude": -71.06944896672655,
+            "latitude": 42.374664645575564,
+            "z": 23.210724336095154
+          },
+          {
+            "longitude": -71.06932427727025,
+            "latitude": 42.37470466097887,
+            "z": 23.3108122209087
+          },
+          {
+            "longitude": -71.06940813818468,
+            "latitude": 42.37484475015365,
+            "z": 23.29355557821691
+          }
+        ]
+      },
+      "tiltDeg": 15,
+      "azimuthDeg": 180,
+      "peakKw": 10,
+      "panelCount": 20,
+      "notes": "",
+      "lifecycleStatus": "installed",
+      "updatedAt": "2026-05-04T00:53:33.842Z",
+      "id": 1,
+      "installDate": "2026-05-04T00:53:33.841Z",
+      "systemHealth": "healthy",
+      "energy": {
+        "acOutputKw": 8.4,
+        "dailyYieldKwh": 46.2,
+        "weeklyYieldKwh": 293.4,
+        "dcStringVoltageV": 394,
+        "gridFrequencyHz": 60,
+        "performanceRatioPct": 94
+      }
+    },
+    {
+      "name": "Panel Site 2",
+      "geometry": {
+        "type": "point",
+        "longitude": -71.06922734009541,
+        "latitude": 42.37478291943673,
+        "z": 23.25639699632302,
+        "footprintRing": [
+          {
+            "longitude": -71.06931079372427,
+            "latitude": 42.37479989992575,
+            "z": 23.24666633270681
+          },
+          {
+            "longitude": -71.069265424736,
+            "latitude": 42.374726227504176,
+            "z": 23.21276052016765
+          },
+          {
+            "longitude": -71.06914418193502,
+            "latitude": 42.374764673984835,
+            "z": 23.2297302512452
+          },
+          {
+            "longitude": -71.0691889599863,
+            "latitude": 42.374840876332165,
+            "z": 23.33643088117242
+          }
+        ]
+      },
+      "tiltDeg": 15,
+      "azimuthDeg": 180,
+      "peakKw": 10,
+      "panelCount": 20,
+      "notes": "",
+      "lifecycleStatus": "pending",
+      "updatedAt": "2026-05-04T00:25:08.573Z",
+      "id": 2
+    },
+    {
+      "name": "Panel Site D",
+      "geometry": {
+        "type": "point",
+        "longitude": -71.06890396121804,
+        "latitude": 42.37488899191004,
+        "z": 23.24833824019879,
+        "footprintRing": [
+          {
+            "longitude": -71.06898888255289,
+            "latitude": 42.374905616850725,
+            "z": 23.26354588381946
+          },
+          {
+            "longitude": -71.06894183206559,
+            "latitude": 42.374831688953954,
+            "z": 23.215379004366696
+          },
+          {
+            "longitude": -71.06881956418741,
+            "latitude": 42.37487024497551,
+            "z": 23.208928654901683
+          },
+          {
+            "longitude": -71.0688655660663,
+            "latitude": 42.37494841685998,
+            "z": 23.305499417707324
+          }
+        ]
+      },
+      "tiltDeg": 15,
+      "azimuthDeg": 180,
+      "peakKw": 10,
+      "panelCount": 20,
+      "notes": "",
+      "lifecycleStatus": "pending",
+      "updatedAt": "2026-05-04T00:25:47.264Z",
+      "id": 4
+    },
+    {
+      "name": "Panel Site C",
+      "geometry": {
+        "type": "point",
+        "longitude": -71.06906707848829,
+        "latitude": 42.3748359151587,
+        "z": 23.214623724576086,
+        "footprintRing": [
+          {
+            "longitude": -71.06915016261681,
+            "latitude": 42.37485575387815,
+            "z": 23.2700420236215
+          },
+          {
+            "longitude": -71.06910217948243,
+            "latitude": 42.374776642360814,
+            "z": 23.081501262262464
+          },
+          {
+            "longitude": -71.0689839822953,
+            "latitude": 42.3748192057926,
+            "z": 23.22872712276876
+          },
+          {
+            "longitude": -71.06903198955861,
+            "latitude": 42.37489205860323,
+            "z": 23.27822448965162
+          }
+        ]
+      },
+      "tiltDeg": 15,
+      "azimuthDeg": 180,
+      "peakKw": 10,
+      "panelCount": 20,
+      "notes": "",
+      "lifecycleStatus": "pending",
+      "updatedAt": "2026-05-04T00:26:25.322Z",
+      "id": 5
+    },
+    {
+      "name": "Panel A",
+      "geometry": {
+        "type": "point",
+        "longitude": -71.06643175782541,
+        "latitude": 42.37678178713983,
+        "z": 13.388302351580933,
+        "footprintRing": [
+          {
+            "longitude": -71.0666320561279,
+            "latitude": 42.376915867890865,
+            "z": 13.2638802183792
+          },
+          {
+            "longitude": -71.06625034132311,
+            "latitude": 42.37663349112812,
+            "z": 13.256042842753232
+          },
+          {
+            "longitude": -71.06623246088674,
+            "latitude": 42.376648065573164,
+            "z": 13.512182823382318
+          },
+          {
+            "longitude": -71.0666121729639,
+            "latitude": 42.37692972396716,
+            "z": 13.521103521808982
+          }
+        ]
+      },
+      "tiltDeg": 15,
+      "azimuthDeg": 180,
+      "peakKw": 10,
+      "panelCount": 20,
+      "notes": "",
+      "lifecycleStatus": "installed",
+      "updatedAt": "2026-05-04T00:27:25.715Z",
+      "id": 6,
+      "installDate": "2026-05-04T00:27:25.715Z",
+      "systemHealth": "healthy",
+      "energy": {
+        "acOutputKw": 7.2,
+        "dailyYieldKwh": 36.6,
+        "weeklyYieldKwh": 238.2,
+        "dcStringVoltageV": 366,
+        "gridFrequencyHz": 60,
+        "performanceRatioPct": 87
+      }
+    },
+    {
+      "name": "Panel B",
+      "geometry": {
+        "type": "point",
+        "longitude": -71.06658082473972,
+        "latitude": 42.37693670242151,
+        "z": 13.541340859839693,
+        "footprintRing": [
+          {
+            "longitude": -71.066582815847,
+            "latitude": 42.37695078761287,
+            "z": 13.69452931638807
+          },
+          {
+            "longitude": -71.06660239051972,
+            "latitude": 42.37693896815766,
+            "z": 13.421231618151069
+          },
+          {
+            "longitude": -71.06657723314206,
+            "latitude": 42.37692259973441,
+            "z": 13.39274786412716
+          },
+          {
+            "longitude": -71.06656085945012,
+            "latitude": 42.37693445418111,
+            "z": 13.656854640692472
+          }
+        ]
+      },
+      "tiltDeg": 15,
+      "azimuthDeg": 180,
+      "peakKw": 10,
+      "panelCount": 20,
+      "notes": "",
+      "lifecycleStatus": "pending",
+      "updatedAt": "2026-05-04T00:27:52.724Z",
+      "id": 7
+    },
+    {
+      "name": "Panel C",
+      "geometry": {
+        "type": "point",
+        "longitude": -71.06652682218218,
+        "latitude": 42.37689511562183,
+        "z": 13.507304733153433,
+        "footprintRing": [
+          {
+            "longitude": -71.06653575481764,
+            "latitude": 42.37691517220609,
+            "z": 13.643131698481739
+          },
+          {
+            "longitude": -71.06655421536861,
+            "latitude": 42.376902953396645,
+            "z": 13.353412224911153
+          },
+          {
+            "longitude": -71.06651628226382,
+            "latitude": 42.37687508425744,
+            "z": 13.414634482935071
+          },
+          {
+            "longitude": -71.06650103627867,
+            "latitude": 42.37688725262714,
+            "z": 13.618040526285768
+          }
+        ]
+      },
+      "tiltDeg": 15,
+      "azimuthDeg": 180,
+      "peakKw": 10,
+      "panelCount": 20,
+      "notes": "",
+      "lifecycleStatus": "installed",
+      "updatedAt": "2026-05-04T00:28:13.682Z",
+      "id": 8,
+      "installDate": "2026-05-04T00:28:13.682Z",
+      "systemHealth": "healthy",
+      "energy": {
+        "acOutputKw": 6.8,
+        "dailyYieldKwh": 32.7,
+        "weeklyYieldKwh": 216.1,
+        "dcStringVoltageV": 355,
+        "gridFrequencyHz": 60,
+        "performanceRatioPct": 85
+      }
+    },
+    {
+      "name": "Panel D",
+      "geometry": {
+        "type": "point",
+        "longitude": -71.0664620602737,
+        "latitude": 42.37684790504906,
+        "z": 13.510465441504493,
+        "footprintRing": [
+          {
+            "longitude": -71.06647175738102,
+            "latitude": 42.376867360270516,
+            "z": 13.622211223468184
+          },
+          {
+            "longitude": -71.0664883188694,
+            "latitude": 42.37685637693899,
+            "z": 13.379720814526081
+          },
+          {
+            "longitude": -71.06645228419706,
+            "latitude": 42.376828770573546,
+            "z": 13.402837896719575
+          },
+          {
+            "longitude": -71.06643588064733,
+            "latitude": 42.376839112413194,
+            "z": 13.637091831304133
+          }
+        ]
+      },
+      "tiltDeg": 15,
+      "azimuthDeg": 180,
+      "peakKw": 10,
+      "panelCount": 20,
+      "notes": "",
+      "lifecycleStatus": "pending",
+      "updatedAt": "2026-05-04T00:28:33.957Z",
+      "id": 9
+    },
+    {
+      "name": "Panel F",
+      "geometry": {
+        "type": "point",
+        "longitude": -71.06817275877955,
+        "latitude": 42.37716091654603,
+        "z": 16.326642296742648,
+        "footprintRing": [
+          {
+            "longitude": -71.06862261337959,
+            "latitude": 42.37689057280325,
+            "z": 16.46735756471753
+          },
+          {
+            "longitude": -71.06774046820517,
+            "latitude": 42.37744510171691,
+            "z": 16.464387346059084
+          },
+          {
+            "longitude": -71.06772056710007,
+            "latitude": 42.37743207230373,
+            "z": 16.190279826521873
+          },
+          {
+            "longitude": -71.06860738643334,
+            "latitude": 42.37687591936026,
+            "z": 16.184544449672103
+          }
+        ]
+      },
+      "tiltDeg": 15,
+      "azimuthDeg": 180,
+      "peakKw": 10,
+      "panelCount": 20,
+      "notes": "",
+      "lifecycleStatus": "pending",
+      "updatedAt": "2026-05-04T00:29:22.826Z",
+      "id": 10
+    },
+    {
+      "name": "Panel G",
+      "geometry": {
+        "type": "point",
+        "longitude": -71.06769170901025,
+        "latitude": 42.377158386746615,
+        "z": 16.330102268295985,
+        "footprintRing": [
+          {
+            "longitude": -71.0682819546285,
+            "latitude": 42.376816909304516,
+            "z": 16.482823035679758
+          },
+          {
+            "longitude": -71.06824222061455,
+            "latitude": 42.37677668923379,
+            "z": 16.174824187532067
+          },
+          {
+            "longitude": -71.06740802534851,
+            "latitude": 42.37730008922796,
+            "z": 16.160210808739066
+          },
+          {
+            "longitude": -71.06742242910241,
+            "latitude": 42.37733415420105,
+            "z": 16.319684821181
+          },
+          {
+            "longitude": -71.06738881659183,
+            "latitude": 42.377355055386126,
+            "z": 16.271113791503012
+          },
+          {
+            "longitude": -71.06740680777575,
+            "latitude": 42.377367423126266,
+            "z": 16.571956965141
+          }
+        ]
+      },
+      "tiltDeg": 15,
+      "azimuthDeg": 180,
+      "peakKw": 10,
+      "panelCount": 20,
+      "notes": "",
+      "lifecycleStatus": "installed",
+      "updatedAt": "2026-05-04T00:30:56.671Z",
+      "id": 11,
+      "installDate": "2026-05-04T00:30:56.671Z",
+      "systemHealth": "healthy",
+      "energy": {
+        "acOutputKw": 6.1,
+        "dailyYieldKwh": 26.9,
+        "weeklyYieldKwh": 183,
+        "dcStringVoltageV": 338,
+        "gridFrequencyHz": 60,
+        "performanceRatioPct": 81
+      }
+    },
+    {
+      "name": "Panel Test",
+      "geometry": {
+        "type": "point",
+        "longitude": -71.06779877089288,
+        "latitude": 42.376744487436746,
+        "z": 16.397943259682506,
+        "footprintRing": [
+          {
+            "longitude": -71.06780854016475,
+            "latitude": 42.37677399924347,
+            "z": 16.50480649713427
+          },
+          {
+            "longitude": -71.06778676845245,
+            "latitude": 42.37674726559574,
+            "z": 16.517718486487865
+          },
+          {
+            "longitude": -71.06769470180086,
+            "latitude": 42.37680513429709,
+            "z": 16.512984265573323
+          },
+          {
+            "longitude": -71.06767649746189,
+            "latitude": 42.37679067764079,
+            "z": 16.15764673333615
+          },
+          {
+            "longitude": -71.0678946135251,
+            "latitude": 42.37665397997772,
+            "z": 16.181871528737247
+          },
+          {
+            "longitude": -71.06793150395221,
+            "latitude": 42.37669586786566,
+            "z": 16.512632046826184
+          }
+        ]
+      },
+      "tiltDeg": 15,
+      "azimuthDeg": 180,
+      "peakKw": 10,
+      "panelCount": 20,
+      "notes": "",
+      "lifecycleStatus": "pending",
+      "updatedAt": "2026-05-04T00:32:32.881Z",
+      "id": 13
+    },
+    {
+      "name": "Test Panel Y",
+      "geometry": {
+        "type": "point",
+        "longitude": -71.06849057810447,
+        "latitude": 42.37667523561742,
+        "z": 13.737767151324078,
+        "footprintRing": [
+          {
+            "longitude": -71.06853146840939,
+            "latitude": 42.376658815943856,
+            "z": 13.8099279506132
+          },
+          {
+            "longitude": -71.0685186370202,
+            "latitude": 42.376648838628924,
+            "z": 13.677185706794262
+          },
+          {
+            "longitude": -71.06844909332537,
+            "latitude": 42.37668866239744,
+            "z": 13.566059367731214
+          },
+          {
+            "longitude": -71.06846311366296,
+            "latitude": 42.37670462549946,
+            "z": 13.897895580157638
+          }
+        ]
+      },
+      "tiltDeg": 15,
+      "azimuthDeg": 180,
+      "peakKw": 10,
+      "panelCount": 20,
+      "notes": "",
+      "lifecycleStatus": "pending",
+      "updatedAt": "2026-05-04T00:33:11.552Z",
+      "id": 14
+    },
+    {
+      "name": "Test Panel T",
+      "geometry": {
+        "type": "point",
+        "longitude": -71.06841562954946,
+        "latitude": 42.376637339954044,
+        "z": 13.701962093356997,
+        "footprintRing": [
+          {
+            "longitude": -71.0684799237334,
+            "latitude": 42.376609173106814,
+            "z": 13.816634302958846
+          },
+          {
+            "longitude": -71.06846619104331,
+            "latitude": 42.37659486274882,
+            "z": 13.545665400102735
+          },
+          {
+            "longitude": -71.06835188972987,
+            "latitude": 42.37666450979286,
+            "z": 13.583733815699816
+          },
+          {
+            "longitude": -71.06836451369128,
+            "latitude": 42.37668081416768,
+            "z": 13.86181485466659
+          }
+        ]
+      },
+      "tiltDeg": 15,
+      "azimuthDeg": 180,
+      "peakKw": 10,
+      "panelCount": 20,
+      "notes": "",
+      "lifecycleStatus": "installed",
+      "updatedAt": "2026-05-04T00:33:43.056Z",
+      "id": 15,
+      "installDate": "2026-05-04T00:33:43.056Z",
+      "systemHealth": "healthy",
+      "energy": {
+        "acOutputKw": 8,
+        "dailyYieldKwh": 43,
+        "weeklyYieldKwh": 275.1,
+        "dcStringVoltageV": 385,
+        "gridFrequencyHz": 60,
+        "performanceRatioPct": 92
+      }
+    },
+    {
+      "name": "Panel U",
+      "geometry": {
+        "type": "point",
+        "longitude": -71.06857069515749,
+        "latitude": 42.37762246369898,
+        "z": 16.228983080247417,
+        "footprintRing": [
+          {
+            "longitude": -71.06889469955848,
+            "latitude": 42.377431099023404,
+            "z": 16.37990250904113
+          },
+          {
+            "longitude": -71.06888035224448,
+            "latitude": 42.377417812035304,
+            "z": 16.16831406671554
+          },
+          {
+            "longitude": -71.06824598665732,
+            "latitude": 42.37781415795024,
+            "z": 16.04868639074266
+          },
+          {
+            "longitude": -71.06826174216968,
+            "latitude": 42.377826785786965,
+            "z": 16.31902935449034
+          }
+        ]
+      },
+      "tiltDeg": 15,
+      "azimuthDeg": 180,
+      "peakKw": 10,
+      "panelCount": 20,
+      "notes": "",
+      "lifecycleStatus": "pending",
+      "updatedAt": "2026-05-04T00:35:56.909Z",
+      "id": 17
+    },
+    {
+      "name": "Panel J",
+      "geometry": {
+        "type": "point",
+        "longitude": -71.06862776891467,
+        "latitude": 42.37730041519412,
+        "z": 16.41793649061583,
+        "footprintRing": [
+          {
+            "longitude": -71.06853398251842,
+            "latitude": 42.37737010955938,
+            "z": 16.541601108387113
+          },
+          {
+            "longitude": -71.068737214683,
+            "latitude": 42.37724510043306,
+            "z": 16.576788660138845
+          },
+          {
+            "longitude": -71.06872250288424,
+            "latitude": 42.377230709828034,
+            "z": 16.302637603133917
+          },
+          {
+            "longitude": -71.068517375573,
+            "latitude": 42.377355740956,
+            "z": 16.250718590803444
+          }
+        ]
+      },
+      "tiltDeg": 15,
+      "azimuthDeg": 180,
+      "peakKw": 10,
+      "panelCount": 20,
+      "notes": "",
+      "lifecycleStatus": "pending",
+      "updatedAt": "2026-05-04T00:37:11.437Z",
+      "id": 18
+    },
+    {
+      "name": "Panel V",
+      "geometry": {
+        "type": "point",
+        "longitude": -71.06855654669172,
+        "latitude": 42.37730475602733,
+        "z": 16.3775916157756,
+        "footprintRing": [
+          {
+            "longitude": -71.06873052152692,
+            "latitude": 42.377207244276434,
+            "z": 16.493843681178987
+          },
+          {
+            "longitude": -71.06871724592592,
+            "latitude": 42.377196181013254,
+            "z": 16.263070477172732
+          },
+          {
+            "longitude": -71.06838138804201,
+            "latitude": 42.37740375206854,
+            "z": 16.28275626152754
+          },
+          {
+            "longitude": -71.06839703127206,
+            "latitude": 42.37741184675106,
+            "z": 16.470696043223143
+          }
+        ]
+      },
+      "tiltDeg": 15,
+      "azimuthDeg": 180,
+      "peakKw": 10,
+      "panelCount": 20,
+      "notes": "",
+      "lifecycleStatus": "pending",
+      "updatedAt": "2026-05-04T00:37:32.286Z",
+      "id": 19
+    },
+    {
+      "name": "Panel A027",
+      "geometry": {
+        "type": "point",
+        "longitude": -71.06800909620607,
+        "latitude": 42.377690287042334,
+        "z": 16.369182244641706,
+        "footprintRing": [
+          {
+            "longitude": -71.06815577068132,
+            "latitude": 42.37760961706544,
+            "z": 16.370211984962225
+          },
+          {
+            "longitude": -71.06813739130341,
+            "latitude": 42.377598725058526,
+            "z": 16.28070152271539
+          },
+          {
+            "longitude": -71.0678621668365,
+            "latitude": 42.37777010896014,
+            "z": 16.291577850468457
+          },
+          {
+            "longitude": -71.06788105600306,
+            "latitude": 42.377782697085216,
+            "z": 16.534237620420754
+          }
+        ]
+      },
+      "tiltDeg": 15,
+      "azimuthDeg": 180,
+      "peakKw": 10,
+      "panelCount": 20,
+      "notes": "",
+      "lifecycleStatus": "installed",
+      "updatedAt": "2026-05-04T01:07:47.963Z",
+      "id": 20,
+      "installDate": "2026-05-04T01:07:47.963Z",
+      "systemHealth": "healthy",
+      "energy": {
+        "acOutputKw": 6.9,
+        "dailyYieldKwh": 33.4,
+        "weeklyYieldKwh": 220,
+        "dcStringVoltageV": 357,
+        "gridFrequencyHz": 60,
+        "performanceRatioPct": 85
+      }
+    },
+    {
+      "name": "Panel A030",
+      "geometry": {
+        "type": "point",
+        "longitude": -71.06745528213453,
+        "latitude": 42.37763379338308,
+        "z": 13.397236238932237,
+        "footprintRing": [
+          {
+            "longitude": -71.06748127971784,
+            "latitude": 42.37766997070139,
+            "z": 13.49842223431915
+          },
+          {
+            "longitude": -71.06750006629987,
+            "latitude": 42.377659539462925,
+            "z": 13.278216001577675
+          },
+          {
+            "longitude": -71.06742756284218,
+            "latitude": 42.377598942082514,
+            "z": 13.299653698690236
+          },
+          {
+            "longitude": -71.06741221967827,
+            "latitude": 42.37760672128552,
+            "z": 13.512653021141887
+          }
+        ]
+      },
+      "tiltDeg": 15,
+      "azimuthDeg": 180,
+      "peakKw": 10,
+      "panelCount": 20,
+      "notes": "",
+      "lifecycleStatus": "installed",
+      "updatedAt": "2026-05-04T01:08:49.161Z",
+      "id": 22,
+      "installDate": "2026-05-04T01:08:49.161Z",
+      "systemHealth": "healthy",
+      "energy": {
+        "acOutputKw": 6.4,
+        "dailyYieldKwh": 29.5,
+        "weeklyYieldKwh": 197.9,
+        "dcStringVoltageV": 345,
+        "gridFrequencyHz": 60,
+        "performanceRatioPct": 82
+      }
+    },
+    {
+      "name": "Panel B027",
+      "geometry": {
+        "type": "point",
+        "longitude": -71.06868774551238,
+        "latitude": 42.37797447672575,
+        "z": 16.32137829732771,
+        "footprintRing": [
+          {
+            "longitude": -71.06911320864496,
+            "latitude": 42.37772181932182,
+            "z": 16.46432917099446
+          },
+          {
+            "longitude": -71.06909643772681,
+            "latitude": 42.37770676307653,
+            "z": 16.20832516718656
+          },
+          {
+            "longitude": -71.06847767652587,
+            "latitude": 42.37809430992668,
+            "z": 16.198759871535003
+          },
+          {
+            "longitude": -71.0684847512126,
+            "latitude": 42.37810062831198,
+            "z": 16.301857970654964
+          },
+          {
+            "longitude": -71.06847445230797,
+            "latitude": 42.378107139660315,
+            "z": 16.308246550150216
+          },
+          {
+            "longitude": -71.06847994665607,
+            "latitude": 42.37811620005713,
+            "z": 16.44675105344504
+          }
+        ]
+      },
+      "tiltDeg": 15,
+      "azimuthDeg": 180,
+      "peakKw": 10,
+      "panelCount": 20,
+      "notes": "",
+      "lifecycleStatus": "installed",
+      "updatedAt": "2026-05-04T01:08:21.561Z",
+      "id": 23,
+      "installDate": "2026-05-04T01:08:21.561Z",
+      "systemHealth": "healthy",
+      "energy": {
+        "acOutputKw": 6.2,
+        "dailyYieldKwh": 27.6,
+        "weeklyYieldKwh": 186.9,
+        "dcStringVoltageV": 340,
+        "gridFrequencyHz": 60,
+        "performanceRatioPct": 81
+      }
+    },
+    {
+      "name": "Panel B028",
+      "geometry": {
+        "type": "point",
+        "longitude": -71.06890952699857,
+        "latitude": 42.378121136691895,
+        "z": 16.507829094538465,
+        "footprintRing": [
+          {
+            "longitude": -71.06922675908274,
+            "latitude": 42.377934530646314,
+            "z": 16.632924866862595
+          },
+          {
+            "longitude": -71.06921215865265,
+            "latitude": 42.37792143239659,
+            "z": 16.406614175997674
+          },
+          {
+            "longitude": -71.06859096514218,
+            "latitude": 42.378307942262204,
+            "z": 16.35682591702789
+          },
+          {
+            "longitude": -71.0686082251167,
+            "latitude": 42.37832064146247,
+            "z": 16.6349514182657
+          }
+        ]
+      },
+      "tiltDeg": 15,
+      "azimuthDeg": 180,
+      "peakKw": 10,
+      "panelCount": 20,
+      "notes": "",
+      "lifecycleStatus": "installed",
+      "updatedAt": "2026-05-04T01:08:00.339Z",
+      "id": 24,
+      "installDate": "2026-05-04T01:08:00.339Z",
+      "systemHealth": "healthy",
+      "energy": {
+        "acOutputKw": 6,
+        "dailyYieldKwh": 25.7,
+        "weeklyYieldKwh": 175.8,
+        "dcStringVoltageV": 334,
+        "gridFrequencyHz": 60,
+        "performanceRatioPct": 80
+      }
+    },
+    {
+      "name": "Panel C010",
+      "geometry": {
+        "type": "point",
+        "longitude": -71.06912262861788,
+        "latitude": 42.37841427883129,
+        "z": 16.541153835132718,
+        "footprintRing": [
+          {
+            "longitude": -71.06942483049113,
+            "latitude": 42.378236727401095,
+            "z": 16.626600237563252
+          },
+          {
+            "longitude": -71.06941037537665,
+            "latitude": 42.37822384077136,
+            "z": 16.42725977860391
+          },
+          {
+            "longitude": -71.06882065917118,
+            "latitude": 42.378591429694254,
+            "z": 16.41273469198495
+          },
+          {
+            "longitude": -71.06883464943252,
+            "latitude": 42.37860511745846,
+            "z": 16.698020632378757
+          }
+        ]
+      },
+      "tiltDeg": 15,
+      "azimuthDeg": 180,
+      "peakKw": 10,
+      "panelCount": 20,
+      "notes": "",
+      "lifecycleStatus": "installed",
+      "updatedAt": "2026-05-04T01:08:10.482Z",
+      "id": 25,
+      "installDate": "2026-05-04T01:08:10.482Z",
+      "systemHealth": "healthy",
+      "energy": {
+        "acOutputKw": 8.5,
+        "dailyYieldKwh": 47.5,
+        "weeklyYieldKwh": 301,
+        "dcStringVoltageV": 398,
+        "gridFrequencyHz": 60,
+        "performanceRatioPct": 95
+      }
+    },
+    {
+      "name": "Panel C020",
+      "geometry": {
+        "type": "point",
+        "longitude": -71.0691514472185,
+        "latitude": 42.37835418532258,
+        "z": 16.519904610468075,
+        "footprintRing": [
+          {
+            "longitude": -71.06933898723607,
+            "latitude": 42.37824960912945,
+            "z": 16.67582280561328
+          },
+          {
+            "longitude": -71.0693230285477,
+            "latitude": 42.37823468261165,
+            "z": 16.35987113788724
+          },
+          {
+            "longitude": -71.06896362511807,
+            "latitude": 42.37845935794678,
+            "z": 16.322467329911888
+          },
+          {
+            "longitude": -71.06898014797217,
+            "latitude": 42.37847309160243,
+            "z": 16.721457168459892
+          }
+        ]
+      },
+      "tiltDeg": 15,
+      "azimuthDeg": 180,
+      "peakKw": 10,
+      "panelCount": 20,
+      "notes": "",
+      "lifecycleStatus": "installed",
+      "updatedAt": "2026-05-04T01:08:27.818Z",
+      "id": 26,
+      "installDate": "2026-05-04T01:08:27.818Z",
+      "systemHealth": "healthy",
+      "energy": {
+        "acOutputKw": 8.3,
+        "dailyYieldKwh": 45.6,
+        "weeklyYieldKwh": 290,
+        "dcStringVoltageV": 393,
+        "gridFrequencyHz": 60,
+        "performanceRatioPct": 93
+      }
+    },
+    {
+      "name": "Panel C030",
+      "geometry": {
+        "type": "point",
+        "longitude": -71.06881448199807,
+        "latitude": 42.37750999676677,
+        "z": 16.32957738963887,
+        "footprintRing": [
+          {
+            "longitude": -71.06885535947447,
+            "latitude": 42.377495844970056,
+            "z": 16.458689543418586
+          },
+          {
+            "longitude": -71.06884140807733,
+            "latitude": 42.37748406972754,
+            "z": 16.20898676197976
+          },
+          {
+            "longitude": -71.0687723321011,
+            "latitude": 42.377523644413714,
+            "z": 16.188045101240277
+          },
+          {
+            "longitude": -71.06878882833938,
+            "latitude": 42.37753642795577,
+            "z": 16.46258815191686
+          }
+        ]
+      },
+      "tiltDeg": 15,
+      "azimuthDeg": 180,
+      "peakKw": 10,
+      "panelCount": 20,
+      "notes": "",
+      "lifecycleStatus": "installed",
+      "updatedAt": "2026-05-04T01:07:55.066Z",
+      "id": 27,
+      "installDate": "2026-05-04T01:07:55.066Z",
+      "systemHealth": "healthy",
+      "energy": {
+        "acOutputKw": 8.1,
+        "dailyYieldKwh": 43.7,
+        "weeklyYieldKwh": 278.9,
+        "dcStringVoltageV": 387,
+        "gridFrequencyHz": 60,
+        "performanceRatioPct": 92
+      }
+    },
+    {
+      "name": "Panel D031",
+      "geometry": {
+        "type": "point",
+        "longitude": -71.068126741148,
+        "latitude": 42.37821943746214,
+        "z": 13.55108179198578,
+        "footprintRing": [
+          {
+            "longitude": -71.06820845154645,
+            "latitude": 42.37830641640652,
+            "z": 13.7070298679173
+          },
+          {
+            "longitude": -71.0682272892468,
+            "latitude": 42.378293759676254,
+            "z": 13.442590427584946
+          },
+          {
+            "longitude": -71.06804617737042,
+            "latitude": 42.378132502279634,
+            "z": 13.415280160494149
+          },
+          {
+            "longitude": -71.06802504642832,
+            "latitude": 42.37814507148615,
+            "z": 13.639426711946726
+          }
+        ]
+      },
+      "tiltDeg": 15,
+      "azimuthDeg": 180,
+      "peakKw": 10,
+      "panelCount": 20,
+      "notes": "",
+      "lifecycleStatus": "installed",
+      "updatedAt": "2026-05-04T01:08:05.370Z",
+      "id": 28,
+      "installDate": "2026-05-04T01:08:05.370Z",
+      "systemHealth": "healthy",
+      "energy": {
+        "acOutputKw": 7.8,
+        "dailyYieldKwh": 41.8,
+        "weeklyYieldKwh": 267.9,
+        "dcStringVoltageV": 381,
+        "gridFrequencyHz": 60,
+        "performanceRatioPct": 91
+      }
+    },
+    {
+      "name": "Panel E017",
+      "geometry": {
+        "type": "point",
+        "longitude": -71.06860030157151,
+        "latitude": 42.37863568986832,
+        "z": 14.053724286379293,
+        "footprintRing": [
+          {
+            "longitude": -71.06868191703276,
+            "latitude": 42.37872269119077,
+            "z": 14.206191544421017
+          },
+          {
+            "longitude": -71.06870217494202,
+            "latitude": 42.37871059724035,
+            "z": 13.896222629584372
+          },
+          {
+            "longitude": -71.06851817999825,
+            "latitude": 42.37854895441324,
+            "z": 13.931291529908776
+          },
+          {
+            "longitude": -71.06849893431297,
+            "latitude": 42.37856051662891,
+            "z": 14.181191441603005
+          }
+        ]
+      },
+      "tiltDeg": 15,
+      "azimuthDeg": 180,
+      "peakKw": 10,
+      "panelCount": 20,
+      "notes": "",
+      "lifecycleStatus": "installed",
+      "updatedAt": "2026-05-04T01:08:15.851Z",
+      "id": 29,
+      "installDate": "2026-05-04T01:08:15.851Z",
+      "systemHealth": "healthy",
+      "energy": {
+        "acOutputKw": 7.6,
+        "dailyYieldKwh": 39.8,
+        "weeklyYieldKwh": 256.9,
+        "dcStringVoltageV": 376,
+        "gridFrequencyHz": 60,
+        "performanceRatioPct": 89
+      }
+    },
+    {
+      "name": "Panel A028",
+      "geometry": {
+        "type": "point",
+        "longitude": -71.06840058469469,
+        "latitude": 42.37845917603712,
+        "z": 14.028163653798401,
+        "footprintRing": [
+          {
+            "longitude": -71.06842664291545,
+            "latitude": 42.37849552519936,
+            "z": 14.166651541367173
+          },
+          {
+            "longitude": -71.06844396867052,
+            "latitude": 42.3784848658592,
+            "z": 13.923334080725908
+          },
+          {
+            "longitude": -71.06837521719304,
+            "latitude": 42.37842247495835,
+            "z": 13.862127697095275
+          },
+          {
+            "longitude": -71.06835650999973,
+            "latitude": 42.37843383813157,
+            "z": 14.160541296005249
+          }
+        ]
+      },
+      "tiltDeg": 15,
+      "azimuthDeg": 180,
+      "peakKw": 10,
+      "panelCount": 20,
+      "notes": "",
+      "lifecycleStatus": "installed",
+      "updatedAt": "2026-05-04T01:08:34.627Z",
+      "id": 30,
+      "installDate": "2026-05-04T01:08:34.627Z",
+      "systemHealth": "healthy",
+      "energy": {
+        "acOutputKw": 7.4,
+        "dailyYieldKwh": 37.9,
+        "weeklyYieldKwh": 245.8,
+        "dcStringVoltageV": 370,
+        "gridFrequencyHz": 60,
+        "performanceRatioPct": 88
+      }
+    },
+    {
+      "name": "Panel A025",
+      "geometry": {
+        "type": "point",
+        "longitude": -71.06810140262635,
+        "latitude": 42.37824636598158,
+        "z": 13.690863246796653,
+        "footprintRing": [
+          {
+            "longitude": -71.06813338068828,
+            "latitude": 42.37828891589753,
+            "z": 13.866743835620582
+          },
+          {
+            "longitude": -71.06815331005077,
+            "latitude": 42.37827724318167,
+            "z": 13.549795793369412
+          },
+          {
+            "longitude": -71.06806971383635,
+            "latitude": 42.37820380013908,
+            "z": 13.537431402131915
+          },
+          {
+            "longitude": -71.06804920593001,
+            "latitude": 42.378215504708024,
+            "z": 13.809481956064701
+          }
+        ]
+      },
+      "tiltDeg": 15,
+      "azimuthDeg": 180,
+      "peakKw": 10,
+      "panelCount": 20,
+      "notes": "",
+      "lifecycleStatus": "installed",
+      "updatedAt": "2026-05-04T01:08:44.139Z",
+      "id": 31,
+      "installDate": "2026-05-04T01:08:44.139Z",
+      "systemHealth": "healthy",
+      "energy": {
+        "acOutputKw": 7.2,
+        "dailyYieldKwh": 36,
+        "weeklyYieldKwh": 234.8,
+        "dcStringVoltageV": 364,
+        "gridFrequencyHz": 60,
+        "performanceRatioPct": 87
+      }
+    },
+    {
+      "name": "Site 1028",
+      "geometry": {
+        "type": "point",
+        "longitude": -71.0694286075659,
+        "latitude": 42.375450028227455,
+        "z": 23.187669886276126,
+        "footprintRing": [
+          {
+            "longitude": -71.06963078113122,
+            "latitude": 42.37534260287995,
+            "z": 23.184629509225488
+          },
+          {
+            "longitude": -71.0691862983094,
+            "latitude": 42.37548468895538,
+            "z": 23.124874112196267
+          },
+          {
+            "longitude": -71.06922577305107,
+            "latitude": 42.37556111624875,
+            "z": 23.1709672100842
+          },
+          {
+            "longitude": -71.06967157777189,
+            "latitude": 42.37541170482575,
+            "z": 23.27020871359855
+          }
+        ]
+      },
+      "tiltDeg": 15,
+      "azimuthDeg": 180,
+      "peakKw": 10,
+      "panelCount": 20,
+      "notes": "",
+      "lifecycleStatus": "installed",
+      "updatedAt": "2026-05-04T01:08:39.818Z",
+      "id": 32,
+      "installDate": "2026-05-04T01:08:39.818Z",
+      "systemHealth": "healthy",
+      "energy": {
+        "acOutputKw": 6.9,
+        "dailyYieldKwh": 34.1,
+        "weeklyYieldKwh": 223.8,
+        "dcStringVoltageV": 359,
+        "gridFrequencyHz": 60,
+        "performanceRatioPct": 86
+      }
+    },
+    {
+      "name": "Site B201",
+      "geometry": {
+        "type": "point",
+        "longitude": -71.07105716458574,
+        "latitude": 42.375734165430316,
+        "z": 16.848690853687003,
+        "footprintRing": [
+          {
+            "longitude": -71.07130713760178,
+            "latitude": 42.37576788235877,
+            "z": 15.135028454475105
+          },
+          {
+            "longitude": -71.07118877627722,
+            "latitude": 42.37557170444938,
+            "z": 18.59277809597552
+          },
+          {
+            "longitude": -71.07080730493284,
+            "latitude": 42.3756981634104,
+            "z": 18.574979395605624
+          },
+          {
+            "longitude": -71.0709254395311,
+            "latitude": 42.37589891150272,
+            "z": 15.091977468691766
+          }
+        ]
+      },
+      "tiltDeg": 15,
+      "azimuthDeg": 180,
+      "peakKw": 10,
+      "panelCount": 20,
+      "notes": "",
+      "lifecycleStatus": "pending",
+      "updatedAt": "2026-05-04T00:45:32.145Z",
+      "id": 33
+    },
+    {
+      "name": "Panel 3028",
+      "geometry": {
+        "type": "point",
+        "longitude": -71.06881271856702,
+        "latitude": 42.37785482538448,
+        "z": 16.284113224362954,
+        "footprintRing": [
+          {
+            "longitude": -71.06899052553133,
+            "latitude": 42.37775478505971,
+            "z": 16.39829410240054
+          },
+          {
+            "longitude": -71.06897413013255,
+            "latitude": 42.377741325212625,
+            "z": 16.133385805413127
+          },
+          {
+            "longitude": -71.06863613895887,
+            "latitude": 42.37795471520206,
+            "z": 16.17570887133479
+          },
+          {
+            "longitude": -71.06865007964532,
+            "latitude": 42.377968476063536,
+            "z": 16.42906411830336
+          }
+        ]
+      },
+      "tiltDeg": 15,
+      "azimuthDeg": 180,
+      "peakKw": 10,
+      "panelCount": 20,
+      "notes": "",
+      "lifecycleStatus": "installed",
+      "updatedAt": "2026-05-04T01:10:07.987Z",
+      "id": 34,
+      "installDate": "2026-05-04T01:10:07.987Z",
+      "systemHealth": "healthy",
+      "energy": {
+        "acOutputKw": 6.5,
+        "dailyYieldKwh": 30.2,
+        "weeklyYieldKwh": 201.7,
+        "dcStringVoltageV": 347,
+        "gridFrequencyHz": 60,
+        "performanceRatioPct": 83
+      }
+    },
+    {
+      "name": "Panel 3029",
+      "geometry": {
+        "type": "point",
+        "longitude": -71.06855294670555,
+        "latitude": 42.377677191765024,
+        "z": 16.32977823051624,
+        "footprintRing": [
+          {
+            "longitude": -71.06873624806126,
+            "latitude": 42.37757188465439,
+            "z": 16.465497535653412
+          },
+          {
+            "longitude": -71.06872269820303,
+            "latitude": 42.37756106227184,
+            "z": 16.26214011479169
+          },
+          {
+            "longitude": -71.06836990000878,
+            "latitude": 42.37777941743322,
+            "z": 16.203141428530216
+          },
+          {
+            "longitude": -71.06838294054914,
+            "latitude": 42.377796402700646,
+            "z": 16.38833384308964
+          }
+        ]
+      },
+      "tiltDeg": 15,
+      "azimuthDeg": 180,
+      "peakKw": 10,
+      "panelCount": 20,
+      "notes": "",
+      "lifecycleStatus": "pending",
+      "updatedAt": "2026-05-04T01:10:30.197Z",
+      "id": 35
+    },
+    {
+      "name": "Panel D2031",
+      "geometry": {
+        "type": "point",
+        "longitude": -71.07104689798163,
+        "latitude": 42.375562520574576,
+        "z": 14.815309171332046,
+        "footprintRing": [
+          {
+            "longitude": -71.07117607392645,
+            "latitude": 42.37554839683112,
+            "z": 14.83334047999233
+          },
+          {
+            "longitude": -71.07114822320892,
+            "latitude": 42.375497466557235,
+            "z": 14.801876620389521
+          },
+          {
+            "longitude": -71.07092223064184,
+            "latitude": 42.375574092503605,
+            "z": 14.862286909483373
+          },
+          {
+            "longitude": -71.07094106414935,
+            "latitude": 42.375630126406335,
+            "z": 14.763732675462961
+          }
+        ]
+      },
+      "tiltDeg": 15,
+      "azimuthDeg": 180,
+      "peakKw": 10,
+      "panelCount": 20,
+      "notes": "",
+      "lifecycleStatus": "pending",
+      "updatedAt": "2026-05-04T01:11:08.088Z",
+      "id": 36
+    },
+    {
+      "name": "Panel D2010",
+      "geometry": {
+        "type": "point",
+        "longitude": -71.06820690400514,
+        "latitude": 42.37718135124229,
+        "z": 16.41096358350478,
+        "footprintRing": [
+          {
+            "longitude": -71.06784531639371,
+            "latitude": 42.37741990768501,
+            "z": 16.588303270749748
+          },
+          {
+            "longitude": -71.06858462489322,
+            "latitude": 42.376955138070834,
+            "z": 16.526210881769657
+          },
+          {
+            "longitude": -71.06856753896736,
+            "latitude": 42.37694370289847,
+            "z": 16.238341770134866
+          },
+          {
+            "longitude": -71.06783013576623,
+            "latitude": 42.37740665631486,
+            "z": 16.290998411364853
+          }
+        ]
+      },
+      "tiltDeg": 15,
+      "azimuthDeg": 180,
+      "peakKw": 10,
+      "panelCount": 20,
+      "notes": "",
+      "lifecycleStatus": "pending",
+      "updatedAt": "2026-05-04T01:11:44.998Z",
+      "id": 37
+    },
+    {
+      "name": "Panel F2031",
+      "geometry": {
+        "type": "point",
+        "longitude": -71.06896638876134,
+        "latitude": 42.37812881057426,
+        "z": 16.56796120130457,
+        "footprintRing": [
+          {
+            "longitude": -71.068738301271,
+            "latitude": 42.37828278919907,
+            "z": 16.696840163320303
+          },
+          {
+            "longitude": -71.06920662987193,
+            "latitude": 42.37798762044639,
+            "z": 16.649727527052164
+          },
+          {
+            "longitude": -71.06919573949699,
+            "latitude": 42.37797646601949,
+            "z": 16.481904262676835
+          },
+          {
+            "longitude": -71.06872488440544,
+            "latitude": 42.3782683666321,
+            "z": 16.443372852168977
+          }
+        ]
+      },
+      "tiltDeg": 15,
+      "azimuthDeg": 180,
+      "peakKw": 10,
+      "panelCount": 20,
+      "notes": "",
+      "lifecycleStatus": "installed",
+      "updatedAt": "2026-05-04T01:12:26.915Z",
+      "id": 38,
+      "installDate": "2026-05-04T01:12:26.915Z",
+      "systemHealth": "healthy",
+      "energy": {
+        "acOutputKw": 8.4,
+        "dailyYieldKwh": 46.3,
+        "weeklyYieldKwh": 293.8,
+        "dcStringVoltageV": 395,
+        "gridFrequencyHz": 60,
+        "performanceRatioPct": 94
+      }
+    },
+    {
+      "name": "Panel F2031",
+      "geometry": {
+        "type": "point",
+        "longitude": -71.06765276753814,
+        "latitude": 42.37780488432401,
+        "z": 13.345226968638599,
+        "footprintRing": [
+          {
+            "longitude": -71.06773522355375,
+            "latitude": 42.37788950060542,
+            "z": 13.466765984892845
+          },
+          {
+            "longitude": -71.06775191423723,
+            "latitude": 42.37787852812901,
+            "z": 13.249983507208526
+          },
+          {
+            "longitude": -71.06757153119955,
+            "latitude": 42.37771963770408,
+            "z": 13.191177481785417
+          },
+          {
+            "longitude": -71.06755240116198,
+            "latitude": 42.37773187085752,
+            "z": 13.472980900667608
+          }
+        ]
+      },
+      "tiltDeg": 15,
+      "azimuthDeg": 180,
+      "peakKw": 10,
+      "panelCount": 20,
+      "notes": "",
+      "lifecycleStatus": "installed",
+      "updatedAt": "2026-05-04T01:13:52.452Z",
+      "id": 40,
+      "installDate": "2026-05-04T01:13:52.451Z",
+      "systemHealth": "healthy",
+      "energy": {
+        "acOutputKw": 7.9,
+        "dailyYieldKwh": 42.4,
+        "weeklyYieldKwh": 271.7,
+        "dcStringVoltageV": 383,
+        "gridFrequencyHz": 60,
+        "performanceRatioPct": 91
+      }
+    },
+    {
+      "name": "Site 201",
+      "geometry": {
+        "type": "point",
+        "longitude": -71.06728285252622,
+        "latitude": 42.37795327069412,
+        "z": 13.427591456566006,
+        "footprintRing": [
+          {
+            "longitude": -71.06732389560177,
+            "latitude": 42.378025231123885,
+            "z": 14.591510883532465
+          },
+          {
+            "longitude": -71.06736988542445,
+            "latitude": 42.37799447089254,
+            "z": 12.345157630741596
+          },
+          {
+            "longitude": -71.06724112932974,
+            "latitude": 42.37788320423852,
+            "z": 12.26062650885433
+          },
+          {
+            "longitude": -71.06719649974893,
+            "latitude": 42.37791017652155,
+            "z": 14.513070803135633
+          }
+        ]
+      },
+      "tiltDeg": 15,
+      "azimuthDeg": 180,
+      "peakKw": 10,
+      "panelCount": 20,
+      "notes": "",
+      "lifecycleStatus": "pending",
+      "updatedAt": "2026-05-04T01:14:55.300Z",
+      "id": 41
+    }
+  ]
+}
