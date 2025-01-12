@@ -43,7 +43,7 @@
   <section class="panel__list" aria-label="Proposal list">
     <h2 class="panel__sub">Proposals ({{ sites.length }})</h2>
     @if (sites.length === 0) {
-      <p class="muted">No proposals yet. Use <strong>Add site</strong> to create one.</p>
+      <p class="muted">No proposals yet. Add a site or seed <code>server/db.json</code>.</p>
     }
     <ul class="sites">
       @for (s of sites; track s.id) {

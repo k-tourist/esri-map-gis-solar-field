@@ -2,6 +2,20 @@
 
 Angular 19 SPA aligned with [urban-scene in k-tourist/demo-gis](https://github.com/k-tourist/demo-gis/tree/main/urban-scene): same routes, map, workspace, and **`SiteService`** REST usage against a **`/sites`** resource. **This repository contains only the web app**—no `server/`, no json-server scripts, and no bundled seed data. Run your API elsewhere (for example the `server/` + `npm run api` setup from that repo in a separate checkout or deploy).
 
+## Screenshots
+
+Map workspace — **Proposals** tab, 3D Boston scene with PV footprints and proposal list.
+
+![Map workspace — Proposals](assets/1.png)
+
+Map workspace — **Installations** tab, list with health badges and selection footer telemetry for a commissioned site.
+
+![Map workspace — Installations](assets/2.png)
+
+**Fleet dashboard** — read-only KPIs, commissioned energy rollups, and per-site table (no map).
+
+![Fleet dashboard](assets/3.png)
+
 ## API expectations
 
 - **Development (`ng serve`)**: `SiteService` calls `http://localhost:3001/sites` (same as the upstream app when json-server listens there with CORS). Ensure your backend matches json-server-style routes: `GET/POST /sites`, `GET/PATCH/DELETE /sites/:id`.

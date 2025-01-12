@@ -50,7 +50,7 @@ export class SitesStore {
       next: (list) => this.sites.set(list.map(normalizeSite)),
       error: () =>
         this.apiError.set(
-          'Unable to reach the API. Start the data service on port 3001 (for example json-server with the urban-scene `server/db.json` from the demo-gis repo) and refresh.',
+          'Unable to reach the API. Start the data service (`npm run api` or `npm run dev`) and ensure port 3001 is available.',
         ),
     });
   }
