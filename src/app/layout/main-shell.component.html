@@ -1,0 +1,60 @@
+<div class="shell">
+  <header class="shell__header">
+    <div class="shell__brand">
+      <span class="shell__logo" aria-hidden="true">☀</span>
+      <div>
+        <div class="shell__title">Solar Field Desk</div>
+        <div class="shell__subtitle">
+          Proposal design and commissioned PV — Boston demonstration scene
+        </div>
+      </div>
+    </div>
+    <nav class="shell__nav" aria-label="Workspace">
+      <button
+        type="button"
+        class="nav-tab"
+        [class.is-active]="store.workspaceTab() === 'pending'"
+        (click)="store.setWorkspaceTab('pending')"
+      >
+        <span class="nav-tab__label">Proposals</span>
+        <span class="nav-tab__hint">Footprint and electrical design</span>
+      </button>
+      <button
+        type="button"
+        class="nav-tab"
+        [class.is-active]="store.workspaceTab() === 'installed'"
+        (click)="store.setWorkspaceTab('installed')"
+      >
+        <span class="nav-tab__label">Installations</span>
+        <span class="nav-tab__hint">Operations and telemetry</span>
+      </button>
+    </nav>
+    <a routerLink="/dashboard" class="shell__dash-link">Fleet dashboard</a>
+  </header>
+
+  @if (store.apiError()) {
+    <div class="shell__banner" role="alert">{{ store.apiError() }}</div>
+  }
+
+  <div class="shell__body">
+    <section class="shell__map" aria-label="Scene map">
+      <app-map-panel
+        [sites]="store.sites()"
+        [selectedId]="store.selectedId()"
+        [addMode]="mapAddEnabled()"
+        (siteSelected)="onMapSite($event)"
+      />
+    </section>
+    <aside class="shell__panel" aria-label="Workspace">
+      <div class="shell__workspace">
+        @if (store.workspaceTab() === 'pending') {
+          <app-pending-page />
+        } @else {
+          <app-installed-page />
+        }
+      </div>
+    </aside>
+  </div>
+
+  <app-site-selection-footer />
+</div>
