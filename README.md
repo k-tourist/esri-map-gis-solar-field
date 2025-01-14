@@ -1,14 +1,14 @@
-# UrbanScene (frontend)
+# Solar Field Desk
 
-Angular 19 SPA aligned with [urban-scene in k-tourist/demo-gis](https://github.com/k-tourist/demo-gis/tree/main/urban-scene): same routes, map, workspace, and **`SiteService`** REST usage against a **`/sites`** resource. **This repository contains only the web app**—no `server/`, no json-server scripts, and no bundled seed data. Run your API elsewhere (for example the `server/` + `npm run api` setup from that repo in a separate checkout or deploy).
+Angular 19 SPA for solar site management: map workspace (proposals and installations), fleet dashboard, and **`SiteService`** REST calls to **`/sites`**. This package is frontend-only—no bundled backend or seed data; provide an API that implements the routes below.
 
 ## Screenshots
 
-Map workspace — **Proposals** tab, 3D Boston scene with PV footprints and proposal list.
+Map workspace — **Proposals** tab, 3D scene with PV footprints and proposal list.
 
 ![Map workspace — Proposals](assets/1.png)
 
-Map workspace — **Installations** tab, list with health badges and selection footer telemetry for a commissioned site.
+Map workspace — **Installations** tab, list with health badges and selection footer for a commissioned site.
 
 ![Map workspace — Installations](assets/2.png)
 
@@ -18,8 +18,8 @@ Map workspace — **Installations** tab, list with health badges and selection f
 
 ## API expectations
 
-- **Development (`ng serve`)**: `SiteService` calls `http://localhost:3001/sites` (same as the upstream app when json-server listens there with CORS). Ensure your backend matches json-server-style routes: `GET/POST /sites`, `GET/PATCH/DELETE /sites/:id`.
-- **Production builds**: `SiteService` uses `src/environments/environment.ts` → `environment.apiBase` plus `/sites` (default `apiBase` is `/api`, so requests go to `/api/sites` on the app origin; change `apiBase` or use a reverse proxy as needed).
+- **Development (`ng serve`)**: `SiteService` uses `http://localhost:3001/sites`. Backend should expose `GET/POST /sites` and `GET/PATCH/DELETE /sites/:id` (json-server-style), with CORS if the API is on another origin.
+- **Production**: `src/environments/environment.ts` → `environment.apiBase` plus `/sites` (default `apiBase` is `/api`, so `/api/sites` on the app host). Adjust `apiBase` or use a reverse proxy as needed.
 
 ## Run the UI
 
@@ -27,7 +27,7 @@ Map workspace — **Installations** tab, list with health badges and selection f
 npm start
 ```
 
-Open `http://localhost:4200/` (map workspace) or `http://localhost:4200/dashboard` (fleet dashboard). If the API is not reachable, the app shows an error banner until requests succeed.
+Open `http://localhost:4200/` (map) or `http://localhost:4200/dashboard`. If the API is unreachable, an error banner shows until requests succeed.
 
 ## Build
 
@@ -35,7 +35,7 @@ Open `http://localhost:4200/` (map workspace) or `http://localhost:4200/dashboar
 npm run build
 ```
 
-Output: `dist/urban-scene`.
+Output: `dist/gis-solar-panel-management`.
 
 ## Tests
 

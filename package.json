@@ -1,6 +1,7 @@
 {
-  "name": "urban-scene",
+  "name": "gis-solar-panel-management",
   "version": "0.0.0",
+  "description": "Solar Field Desk — Angular SPA (REST /sites).",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
