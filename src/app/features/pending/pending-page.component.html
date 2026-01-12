@@ -1,1 +1,26 @@
-<div class="workspace-placeholder">Proposals workspace</div>
+<div class="page">
+  <div class="page__intro">
+    <h2 class="page__title">Proposals</h2>
+    <p class="page__lead">
+      Define proposed arrays before commissioning. Use <strong>Add site</strong>, then
+      place at least three vertices on the map to outline the footprint. Summary and
+      commissioning actions appear in the footer; detailed attributes are edited here.
+    </p>
+  </div>
+
+  <app-site-panel
+    [sites]="store.pendingSites()"
+    [selectedId]="store.selectedId()"
+    [addMode]="store.addMode()"
+    [draftPlacement]="store.draftPlacement()"
+    [draftFootprintVertices]="store.draftFootprintVertices()"
+    [apiError]="store.apiError()"
+    (pickSite)="store.selectSiteFromWorkspace($event)"
+    (toggleAddMode)="store.toggleAddMode()"
+    (cancelDraft)="store.cancelDraft()"
+    (undoDraftCorner)="store.undoDraftFootprintVertex()"
+    (saveCreate)="store.create($event)"
+    (saveUpdate)="store.update($event.id, $event.body)"
+    (deleteSite)="store.delete($event)"
+  />
+</div>

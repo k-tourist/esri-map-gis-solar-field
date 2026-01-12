@@ -7,5 +7,13 @@ export const routes: Routes = [
       import('./layout/main-shell.component').then((m) => m.MainShellComponent),
     title: 'Solar Field Desk',
   },
+  {
+    path: 'dashboard',
+    loadComponent: () =>
+      import('./features/dashboard/dashboard-page.component').then(
+        (m) => m.DashboardPageComponent,
+      ),
+    title: 'Fleet dashboard — Solar Field Desk',
+  },
   { path: '**', redirectTo: '' },
 ];

@@ -1,0 +1,145 @@
+<div class="dash">
+  <header class="dash__chrome">
+    <div class="dash__intro">
+      <h1 class="dash__title">Fleet dashboard</h1>
+      <p class="dash__subtitle">
+        Read-only rollups: panel counts, nameplate capacity, and illustrative energy (commissioned
+        sites). No map.
+      </p>
+    </div>
+    <a routerLink="/" class="dash__back">Map workspace</a>
+  </header>
+
+  @if (store.apiError()) {
+    <div class="dash__banner" role="alert">{{ store.apiError() }}</div>
+  }
+
+  @if (portfolio().totalSites === 0) {
+    <div class="empty">
+      <p class="empty__title">No site records loaded</p>
+      <p class="empty__text">
+        Open the map workspace to load the local catalog, then return here to refresh metrics.
+      </p>
+      <a routerLink="/" class="empty__link">Open map workspace</a>
+    </div>
+  } @else {
+    <section class="kpis" aria-label="Portfolio summary">
+      <article class="kpi">
+        <span class="kpi__label">Sites (total)</span>
+        <span class="kpi__value">{{ portfolio().totalSites }}</span>
+      </article>
+      <article class="kpi">
+        <span class="kpi__label">Proposals</span>
+        <span class="kpi__value">{{ portfolio().pendingCount }}</span>
+      </article>
+      <article class="kpi">
+        <span class="kpi__label">Installations</span>
+        <span class="kpi__value">{{ portfolio().installedCount }}</span>
+      </article>
+      <article class="kpi">
+        <span class="kpi__label">Panels (fleet)</span>
+        <span class="kpi__value">{{ portfolio().panelsTotal | number }}</span>
+      </article>
+      <article class="kpi">
+        <span class="kpi__label">Panels (installed)</span>
+        <span class="kpi__value">{{ portfolio().panelsInstalled | number }}</span>
+      </article>
+      <article class="kpi">
+        <span class="kpi__label">Panels (proposals)</span>
+        <span class="kpi__value">{{ portfolio().panelsPending | number }}</span>
+      </article>
+      <article class="kpi">
+        <span class="kpi__label">Nameplate installed</span>
+        <span class="kpi__value">{{ portfolio().peakInstalledKw | number : '1.0-1' }} kW</span>
+      </article>
+      <article class="kpi">
+        <span class="kpi__label">Nameplate in proposals</span>
+        <span class="kpi__value">{{ portfolio().peakPendingKw | number : '1.0-1' }} kW</span>
+      </article>
+    </section>
+
+    @if (fleet().sites.length === 0) {
+      <div class="note">
+        <strong>No commissioned arrays yet.</strong>
+        Commission a proposal on the map to populate energy and per-site operations rows.
+        <a routerLink="/" class="note__link">Go to map</a>
+      </div>
+    } @else {
+      <h2 class="dash__section-heading">Commissioned — energy</h2>
+      <section class="kpis kpis--tight" aria-label="Energy summary">
+        <article class="kpi">
+          <span class="kpi__label">Nameplate (installed)</span>
+          <span class="kpi__value">{{ fleet().nameplateKw | number : '1.0-1' }} kW</span>
+        </article>
+        <article class="kpi">
+          <span class="kpi__label">AC output (sum)</span>
+          <span class="kpi__value">{{ fleet().acKw | number : '1.0-1' }} kW</span>
+        </article>
+        <article class="kpi">
+          <span class="kpi__label">Energy today</span>
+          <span class="kpi__value">{{ fleet().dailyKwh | number : '1.0-1' }} kWh</span>
+        </article>
+        <article class="kpi">
+          <span class="kpi__label">Avg performance ratio</span>
+          <span class="kpi__value">
+            @if (fleet().avgPrPct != null) {
+              {{ fleet().avgPrPct | number : '1.0-0' }}%
+            } @else {
+              —
+            }
+          </span>
+        </article>
+      </section>
+
+      <section class="table-wrap" aria-label="Per-site detail">
+        <div class="table-scroll">
+          <table class="grid">
+            <thead>
+              <tr>
+                <th scope="col">Site</th>
+                <th scope="col">Panels</th>
+                <th scope="col">Peak kW</th>
+                <th scope="col">AC kW</th>
+                <th scope="col">Today kWh</th>
+                <th scope="col">7d kWh</th>
+                <th scope="col">PR %</th>
+                <th scope="col">Health</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (s of fleet().sites; track trackById($index, s)) {
+                <tr>
+                  <td>
+                    <div class="site-cell">
+                      <span class="site-cell__name">{{ s.name }}</span>
+                      <div class="bar" role="presentation">
+                        <div class="bar__fill" [style.width.%]="acBarPct(s)"></div>
+                      </div>
+                      @let fleetShare = acFleetSharePct(s);
+                      @if (fleetShare !== null) {
+                        <span class="site-cell__share"
+                          >{{ fleetShare | number : '1.0-0' }}% of fleet AC</span
+                        >
+                      }
+                    </div>
+                  </td>
+                  <td>{{ s.panelCount | number }}</td>
+                  <td>{{ s.peakKw | number : '1.0-1' }}</td>
+                  <td>{{ s.energy?.acOutputKw | number : '1.0-1' }}</td>
+                  <td>{{ s.energy?.dailyYieldKwh | number : '1.0-1' }}</td>
+                  <td>{{ s.energy?.weeklyYieldKwh | number : '1.0-0' }}</td>
+                  <td>{{ s.energy?.performanceRatioPct | number : '1.0-0' }}</td>
+                  <td>
+                    <span class="health-pill" [ngClass]="healthClass(s.systemHealth)">{{
+                      healthLabel(s.systemHealth)
+                    }}</span>
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      </section>
+    }
+  }
+</div>

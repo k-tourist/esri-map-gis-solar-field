@@ -1,1 +1,224 @@
-<footer class="footer-stub"></footer>
+<footer class="site-footer" role="contentinfo" aria-label="Selection details">
+  @if (selectedSite(); as site) {
+    <div class="site-footer__inner">
+      <div class="site-footer__lead">
+        <div class="site-footer__title-block">
+          <h2 class="site-footer__name">{{ site.name }}</h2>
+          @if (site.lifecycleStatus === 'installed') {
+            <span
+              class="health-pill"
+              [ngClass]="healthClass(site.systemHealth)"
+              >{{ healthLabel(site.systemHealth) }}</span
+            >
+          } @else {
+            <span class="health-pill health-pill--pending">Pending</span>
+          }
+          @if (site.lifecycleStatus === 'installed') {
+            <span class="site-footer__tag" role="note"
+              >Commissioned · demonstration telemetry</span
+            >
+          } @else {
+            <span class="site-footer__tag site-footer__tag--pending" role="note"
+              >Proposal · not commissioned</span
+            >
+          }
+        </div>
+        <div class="site-footer__actions">
+          @if (site.lifecycleStatus === 'pending') {
+            <button
+              type="button"
+              class="site-footer__btn site-footer__btn--install"
+              [attr.aria-label]="'Commission installation: ' + site.name"
+              (click)="onInstallClick($event, site)"
+            >
+              Install
+            </button>
+          }
+          <button
+            type="button"
+            class="site-footer__btn site-footer__btn--primary"
+            (click)="onFocusMapClick($event, site.id)"
+          >
+            Fly to selection
+          </button>
+          @if (site.lifecycleStatus === 'installed') {
+            <button
+              type="button"
+              class="site-footer__btn site-footer__btn--danger"
+              [attr.aria-label]="'Remove installation ' + site.name"
+              (click)="onUninstallClick($event, site)"
+            >
+              Uninstall
+            </button>
+          }
+          <button
+            type="button"
+            class="site-footer__btn site-footer__btn--ghost"
+            aria-label="Clear selection"
+            (click)="onClear($event)"
+          >
+            Clear
+          </button>
+        </div>
+      </div>
+
+      @if (site.lifecycleStatus === 'installed') {
+        <div class="site-footer__body site-footer__body--installed">
+          <div class="site-footer__score">
+            <div
+              class="score-ring"
+              [ngStyle]="scoreRingStyle(site)"
+              [attr.aria-label]="
+                'Performance index ' + clampPct(site.energy?.performanceRatioPct)
+              "
+            >
+              <span class="score-ring__value">{{
+                site.energy?.performanceRatioPct != null
+                  ? (site.energy?.performanceRatioPct | number : '1.0-0')
+                  : '—'
+              }}</span>
+            </div>
+            <div class="site-footer__score-text">
+              <span class="site-footer__score-label">Performance index</span>
+              <span class="site-footer__score-status">{{
+                scoreQualitative(site)
+              }}</span>
+              <span class="site-footer__score-sub"
+                >Illustrative performance ratio — not a capacity guarantee.</span
+              >
+            </div>
+          </div>
+          <div class="site-footer__tiles">
+            <div class="mini-tile">
+              <span class="mini-tile__v">{{ site.peakKw | number : '1.0-1' }} kW</span>
+              <span class="mini-tile__l">DC nameplate</span>
+            </div>
+            <div class="mini-tile">
+              <span class="mini-tile__v">{{
+                site.energy?.acOutputKw != null
+                  ? (site.energy?.acOutputKw | number : '1.1-1') + ' kW'
+                  : '—'
+              }}</span>
+              <span class="mini-tile__l">AC now</span>
+            </div>
+          </div>
+          <dl class="site-footer__metrics">
+            <div class="mf">
+              <dt>Commissioned</dt>
+              <dd>
+                {{
+                  site.installDate
+                    ? (site.installDate | date : 'mediumDate')
+                    : '—'
+                }}
+              </dd>
+            </div>
+            <div class="mf">
+              <dt>Modules</dt>
+              <dd>{{ site.panelCount }}</dd>
+            </div>
+            <div class="mf">
+              <dt>Tilt / az</dt>
+              <dd>{{ site.tiltDeg }}° / {{ site.azimuthDeg }}°</dd>
+            </div>
+            <div class="mf">
+              <dt>Today</dt>
+              <dd>
+                {{
+                  site.energy?.dailyYieldKwh != null
+                    ? (site.energy?.dailyYieldKwh | number : '1.1-1') + ' kWh'
+                    : '—'
+                }}
+              </dd>
+            </div>
+            <div class="mf">
+              <dt>7-day</dt>
+              <dd>
+                {{
+                  site.energy?.weeklyYieldKwh != null
+                    ? (site.energy?.weeklyYieldKwh | number : '1.0-0') + ' kWh'
+                    : '—'
+                }}
+              </dd>
+            </div>
+            <div class="mf">
+              <dt>String V</dt>
+              <dd>
+                {{
+                  site.energy?.dcStringVoltageV != null
+                    ? (site.energy?.dcStringVoltageV | number : '1.0-0') + ' V'
+                    : '—'
+                }}
+              </dd>
+            </div>
+            <div class="mf">
+              <dt>Grid</dt>
+              <dd>
+                {{
+                  site.energy?.gridFrequencyHz != null
+                    ? (site.energy?.gridFrequencyHz | number : '1.0-1') + ' Hz'
+                    : '—'
+                }}
+              </dd>
+            </div>
+            <div class="mf mf--wide">
+              <dt>Coordinates</dt>
+              <dd class="mf__mono">
+                {{ site.geometry.latitude | number : '1.4-4' }}°,
+                {{ site.geometry.longitude | number : '1.4-4' }}° · z
+                {{ site.geometry.z ?? 40 }} m
+              </dd>
+            </div>
+          </dl>
+          @if (site.notes) {
+            <p class="site-footer__notes">
+              <strong>Notes</strong> {{ site.notes }}
+            </p>
+          }
+        </div>
+      } @else {
+        <div class="site-footer__body site-footer__body--pending">
+          <p class="site-footer__hint">
+            Edit attributes in the <strong>workspace</strong>, then save.
+            Use <strong>Install</strong> to commission this proposal as an operational
+            installation.
+          </p>
+          <dl class="site-footer__metrics site-footer__metrics--pending">
+            <div class="mf">
+              <dt>DC nameplate</dt>
+              <dd>{{ site.peakKw | number : '1.0-1' }} kW</dd>
+            </div>
+            <div class="mf">
+              <dt>Modules</dt>
+              <dd>{{ site.panelCount }}</dd>
+            </div>
+            <div class="mf">
+              <dt>Tilt / az</dt>
+              <dd>{{ site.tiltDeg }}° / {{ site.azimuthDeg }}°</dd>
+            </div>
+            <div class="mf mf--wide">
+              <dt>Coordinates</dt>
+              <dd class="mf__mono">
+                {{ site.geometry.latitude | number : '1.4-4' }}°,
+                {{ site.geometry.longitude | number : '1.4-4' }}° · z
+                {{ site.geometry.z ?? 40 }} m
+              </dd>
+            </div>
+          </dl>
+          @if (site.notes) {
+            <p class="site-footer__notes">
+              <strong>Notes</strong> {{ site.notes }}
+            </p>
+          }
+        </div>
+      }
+    </div>
+  } @else {
+    <div class="site-footer__inner site-footer__inner--empty">
+      <p class="site-footer__empty">
+        Select a proposal or installation on the map or in the list to view summary
+        details and actions.
+      </p>
+    </div>
+  }
+</footer>

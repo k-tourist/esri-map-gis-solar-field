@@ -1,0 +1,147 @@
+<div class="panel">
+  <header class="panel__head">
+    <h1 class="panel__title">Proposal records</h1>
+    <p class="panel__hint">
+      Create or edit proposals here; footprint vertices are captured on the map when add
+      mode is active.
+    </p>
+  </header>
+
+  <div class="panel__actions">
+    <button
+      type="button"
+      class="btn btn--primary"
+      [class.btn--active]="addMode"
+      (click)="onToggleAdd()"
+    >
+      {{ addMode ? 'Cancel' : 'Add site' }}
+    </button>
+    @if (addMode && draftFootprintVertices.length === 0) {
+      <span class="badge"
+        >Click the map to add footprint vertices (minimum three)</span
+      >
+    }
+    @if (addMode && draftFootprintVertices.length > 0) {
+      <span class="badge badge--count"
+        >{{ draftFootprintVertices.length }} vertices</span
+      >
+      <button type="button" class="btn" (click)="onUndoCorner()">
+        Undo last vertex
+      </button>
+    }
+    @if (isCreating) {
+      <button type="button" class="btn" (click)="onCancelDraft()">
+        Discard draft
+      </button>
+    }
+  </div>
+
+  @if (errorMessage || apiError) {
+    <div class="alert" role="alert">{{ errorMessage || apiError }}</div>
+  }
+
+  <section class="panel__list" aria-label="Proposal list">
+    <h2 class="panel__sub">Proposals ({{ sites.length }})</h2>
+    @if (sites.length === 0) {
+      <p class="muted">No proposals yet. Use <strong>Add site</strong> to create one.</p>
+    }
+    <ul class="sites">
+      @for (s of sites; track s.id) {
+        <li class="sites__item">
+          <button
+            type="button"
+            class="site-card"
+            [class.site-card--active]="s.id === selectedId"
+            [attr.aria-current]="s.id === selectedId ? 'true' : null"
+            (click)="onSelectSite(s.id)"
+          >
+            <span class="site-card__rail" aria-hidden="true"></span>
+            <div class="site-card__main">
+              <div class="site-card__topline">
+                <span class="site-card__name">{{ s.name }}</span>
+                @if (s.id === selectedId) {
+                  <span class="site-card__pill">Selected</span>
+                }
+              </div>
+              <span class="site-card__stats"
+                >{{ s.peakKw }} kW DC · {{ s.panelCount }} modules</span
+              >
+              <span class="site-card__geo"
+                >{{ s.geometry.latitude | number : '1.4-4' }}°,
+                {{ s.geometry.longitude | number : '1.4-4' }}° · z
+                {{ s.geometry.z ?? 40 }} m</span
+              >
+            </div>
+            <span class="site-card__chev" aria-hidden="true">⌕</span>
+          </button>
+        </li>
+      }
+    </ul>
+  </section>
+
+  @if (selectedSite || isCreating) {
+    <section class="panel__form" aria-label="Proposal attributes">
+      <h2 class="panel__sub">
+        {{ isCreating ? 'New site' : 'Edit site' }}
+      </h2>
+      <form [formGroup]="form" (ngSubmit)="onSave()">
+        <label class="field">
+          <span>Name</span>
+          <input formControlName="name" type="text" autocomplete="off" />
+        </label>
+        <div class="field-row">
+          <label class="field">
+            <span>Longitude</span>
+            <input formControlName="longitude" type="number" step="0.000001" />
+          </label>
+          <label class="field">
+            <span>Latitude</span>
+            <input formControlName="latitude" type="number" step="0.000001" />
+          </label>
+        </div>
+        <label class="field">
+          <span>Elevation Z (m)</span>
+          <input formControlName="z" type="number" step="0.5" />
+        </label>
+        <div class="field-row">
+          <label class="field">
+            <span>Tilt (°)</span>
+            <input formControlName="tiltDeg" type="number" step="1" />
+          </label>
+          <label class="field">
+            <span>Azimuth (°)</span>
+            <input formControlName="azimuthDeg" type="number" step="1" />
+          </label>
+        </div>
+        <div class="field-row">
+          <label class="field">
+            <span>Peak kW</span>
+            <input formControlName="peakKw" type="number" step="0.1" />
+          </label>
+          <label class="field">
+            <span>Panel count</span>
+            <input formControlName="panelCount" type="number" step="1" />
+          </label>
+        </div>
+        <label class="field">
+          <span>Notes</span>
+          <textarea formControlName="notes" rows="3"></textarea>
+        </label>
+        <div class="form-actions">
+          <button
+            type="submit"
+            class="btn btn--primary"
+            [disabled]="!canSave || form.invalid"
+          >
+            Save
+          </button>
+          @if (selectedSite) {
+            <button type="button" class="btn btn--danger" (click)="onDelete()">
+              Delete
+            </button>
+          }
+        </div>
+      </form>
+    </section>
+  }
+</div>

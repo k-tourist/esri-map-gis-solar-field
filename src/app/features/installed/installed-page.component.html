@@ -1,1 +1,48 @@
-<div class="workspace-placeholder">Installations workspace</div>
+<div class="installed">
+  <header class="installed__head">
+    <h2 class="installed__title">Installations</h2>
+    <p class="installed__lead">
+      Operational arrays for this workspace. Select a row to align the map; summary
+      metrics and actions appear in the footer. Values are illustrative until inverter
+      or SCADA data is integrated.
+    </p>
+  </header>
+
+  @if (store.installedSites().length === 0) {
+    <div class="empty">
+      <p class="empty__title">No installations yet</p>
+      <p class="empty__text">
+        Commission a proposal under
+        <button type="button" class="empty__link" (click)="store.setWorkspaceTab('pending')">
+          Proposals
+        </button>
+        to create an installation record.
+      </p>
+    </div>
+  } @else {
+    <ul class="installed-list" role="list">
+      @for (s of store.installedSites(); track trackById($index, s)) {
+        <li role="listitem">
+          <button
+            type="button"
+            class="installed-row"
+            [class.installed-row--active]="s.id === store.selectedId()"
+            [attr.aria-current]="s.id === store.selectedId() ? 'true' : null"
+            (click)="selectRow(s.id)"
+          >
+            <span class="installed-row__name">{{ s.name }}</span>
+            <span
+              class="health-pill"
+              [ngClass]="healthClass(s.systemHealth)"
+              >{{ healthLabel(s.systemHealth) }}</span
+            >
+            <span class="installed-row__meta"
+              >{{ s.peakKw | number : '1.0-1' }} kW DC</span
+            >
+            <span class="installed-row__chev" aria-hidden="true">⌕</span>
+          </button>
+        </li>
+      }
+    </ul>
+  }
+</div>
