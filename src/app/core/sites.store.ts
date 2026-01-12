@@ -1,5 +1,5 @@
 import { computed, inject, Injectable, signal } from '@angular/core';
-import { SiteRepository } from './site.repository';
+import { SiteService } from './site.service';
 import type {
   Site,
   SiteCreatePayload,
@@ -15,7 +15,7 @@ export type WorkspaceTab = 'pending' | 'installed';
 
 @Injectable({ providedIn: 'root' })
 export class SitesStore {
-  private readonly repository = inject(SiteRepository);
+  private readonly api = inject(SiteService);
 
   readonly sites = signal<Site[]>([]);
   readonly selectedId = signal<number | null>(null);
@@ -46,9 +46,12 @@ export class SitesStore {
 
   load(): void {
     this.apiError.set('');
-    this.repository.list().subscribe({
+    this.api.list().subscribe({
       next: (list) => this.sites.set(list.map(normalizeSite)),
-      error: () => this.apiError.set('Unable to load sites.'),
+      error: () =>
+        this.apiError.set(
+          'Unable to reach the API. Start the data service on port 3001 (for example json-server with the urban-scene `server/db.json` from the demo-gis repo) and refresh.',
+        ),
     });
   }
 
@@ -141,7 +144,7 @@ export class SitesStore {
       ...payload,
       lifecycleStatus: 'pending',
     };
-    this.repository.create(body).subscribe({
+    this.api.create(body).subscribe({
       next: (created) => {
         this.load();
         this.addMode.set(false);
@@ -149,28 +152,37 @@ export class SitesStore {
         this.workspaceTab.set('pending');
         this.selectedId.set(created.id);
       },
-      error: () => this.apiError.set('Unable to create the site.'),
+      error: () =>
+        this.apiError.set(
+          'Unable to create the record. Verify the API is running and try again.',
+        ),
     });
   }
 
   update(id: number, body: SiteUpdatePayload): void {
     this.apiError.set('');
-    this.repository.update(id, body).subscribe({
+    this.api.update(id, body).subscribe({
       next: () => this.load(),
-      error: () => this.apiError.set('Unable to update the site.'),
+      error: () =>
+        this.apiError.set(
+          'Unable to update the record. Verify the API and request payload.',
+        ),
     });
   }
 
   delete(id: number): void {
     this.apiError.set('');
-    this.repository.delete(id).subscribe({
+    this.api.delete(id).subscribe({
       next: () => {
         if (this.selectedId() === id) {
           this.selectedId.set(null);
         }
         this.load();
       },
-      error: () => this.apiError.set('Unable to delete the site.'),
+      error: () =>
+        this.apiError.set(
+          'Unable to delete the record. Verify the API is running.',
+        ),
     });
   }
 
@@ -188,13 +200,16 @@ export class SitesStore {
       energy,
     };
     this.apiError.set('');
-    this.repository.update(siteId, patch).subscribe({
+    this.api.update(siteId, patch).subscribe({
       next: () => {
         this.load();
         this.workspaceTab.set('installed');
         this.selectedId.set(siteId);
       },
-      error: () => this.apiError.set('Unable to commission this installation.'),
+      error: () =>
+        this.apiError.set(
+          'Unable to commission this installation. Verify the API and site data.',
+        ),
     });
   }
 }
